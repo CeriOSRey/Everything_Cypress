@@ -10,7 +10,7 @@ describe("locators", () => {
         cy.get("button")
 
         // get all elements by className use class name by prefixing with .
-        cy.get(".button-with-clas")
+        cy.get(".btn-with-class")
 
         // get all elements with specific classes. Use attributes by wrapping it in []
         cy.get("[class='Elements-btn btn-with-class more-btn-classes']")
@@ -30,7 +30,12 @@ describe("locators", () => {
         // get elements by text
         cy.contains("Unique Text")
 
-        // get elements by selector and text
-        cy.contains( )
+        // get elements by text with selector
+        cy.contains("[class='Elements-btn']", "Not Unique Text")
+    })
+
+    // get the parent element first with a get() then use find to get the element you want.
+    it("locating elements with the find comman", () => {
+        cy.get("#form-1").find(".btn-1")
     })
 })
