@@ -8,3 +8,5 @@
 - user beforeEach and afterEach to setup and clean up.
 
 - wrap the test in an it block
+
+- for readability purpose. only use one .should, after the first .should, use .and 
